@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Altesse Try Regular 96pt';
+    src: url('AltesseStd-Regular96pt.woff2') format('woff2'),
+        url('AltesseStd-Regular96pt.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Medium.woff2') format('woff2'),
+        url('Avenir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('AvenirLTStd-Roman.woff2') format('woff2'),
+        url('AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

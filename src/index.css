@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #201f1d;
+}
+@font-face {
+  font-family: "Altesse Std";
+  src: url("/public/fonts/AltesseStd-Regular96pt.woff2") format("woff2"),
+    url("/public/fonts/AltesseStd-Regular96pt.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/public//fonts/Avenir-Medium.woff2") format("woff2"),
+    url("/public//fonts/Avenir-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir LT Std";
+  src: url("/public/fonts/AvenirLTStd-Roman.woff2") format("woff2"),
+    url("/public/fonts/AvenirLTStd-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Academy Filled 3D";
+  src: url("/public//fonts/AltesseStd-Regular96pt.woff2") format("woff2"),
+    url("/public/fonts/AltesseStd-Regular96pt.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Academy";
+  src: url("/public/fonts/Academy-Regular.woff2") format("woff2"),
+    url("/public/fonts/Academy-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer components {
+  .gradient-btn {
+    @apply btn-gradient text-[#FFFFFF]  text-[14px] font-medium rounded-full p-[2px];
+  }
+  .cardborder {
+    @apply cardBorder;
+  }
+}
+.btn-gradient {
+  background: linear-gradient(175deg, #000000 -49.02%, #f2f2f2 107.14%),
+    linear-gradient(0deg, #000000, #000000);
+}
+.cardBorder {
+  background: radial-gradient(
+      121.6% 121.6% at 50% -21.6%,
+      rgba(0, 0, 0, 0) 0%,
+      #ffffff 89.37%
+    ),
+    linear-gradient(0deg, #201f1d, #201f1d);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.AvenierLtStd {
+  font-family: "Avenir LT Std";
+}
+
+.Altesse_Std {
+  font-family: "Altesse Std";
+}
+.Avenir {
+  font-family: "Avenir";
+}
+.Academy {
+  font-family: "Academy";
+}
+.Academy_Filled_3D {
+  font-family: "Academy Filled 3D";
+}
+.HeroBannerBg {
+  background: linear-gradient(
+      180deg,
+      rgba(32, 31, 29, 0.37) 0%,
+      rgba(138, 131, 126, 0.37) 100%
+    ),
+    url("../public/images/heroBg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pageWidth {
+  max-width: 1480px;
+  width: 90%;
+  margin: auto;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.inputbox {
+  background-color: #efedec !important;
+}
+.luxvalsec {
+  background-image: linear-gradient(64deg, #000000db 31%, #000000db 80%),
+    url(/images/logobg.png) !important;
+  background-position: center;
+  background-size: cover;
+}
+
+@media all and (max-width: 768px) {
+  .cookies {
+    display: none;
+  }
+  .shadow {
+    display: none;
+  }
+  .circle {
+    display: none;
+  }
+}
+
+.mix-blend {
+  mix-blend-mode: color-burn;
+}
+.LuxvalUserHeroBg {
+  background-image: url("/images/Users LP_Hero Banner (Header)@3x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filter {
+  filter: grayscale(1);
+}
