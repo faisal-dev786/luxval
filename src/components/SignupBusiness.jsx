@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import { signUpUser } from "../services/api";
+import { signUpBusiness } from "../services/api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import isEmail from "validator/lib/isEmail";
 
-const Signup = () => {
+const SignupBusiness = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
 
-  const doSignUpUser = async () => {
+  const doSignBusiness = async () => {
     if (!isEmail(email)) {
       setEmailError("Please enter a valid email address.");
     }
     try {
       if (isEmail(email)) {
         setEmailError("");
-        const response = await signUpUser(email);
+        const response = await signUpBusiness(email);
         const data = response.data;
         console.log(data);
         toast.success("Presignup done successfully");
@@ -39,7 +39,7 @@ const Signup = () => {
 
             <div className="inputbox mt-[30px] md:mt-[70px] bg-[#D1C8C1] rounded-[178px] flex items-center py-[20px] h-[60px] max-w-[490px] m-auto ">
               <button
-                onClick={doSignUpUser}
+                onClick={doSignBusiness}
                 className="gradient-btn   text-white rounded-full "
               >
                 <p className="bg-black py-[17px] px-[10px] sm:px-[30px] rounded-full">
@@ -68,4 +68,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignupBusiness;

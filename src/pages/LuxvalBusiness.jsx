@@ -4,9 +4,9 @@ import HeroBanner from "../components/HeroBanner";
 import Cookies from "../components/Cookies";
 import HowItWorks from "../components/HowItWorks";
 import Services from "../components/Services";
-import Signup from "../components/Signup";
 import TwoImages from "../components/TwoImages";
 import { Link } from "react-router-dom";
+import SignupBusiness from "../components/SignupBusiness";
 
 const LuxvalBusiness = () => {
   return (
@@ -18,7 +18,7 @@ const LuxvalBusiness = () => {
       <Cookies />
       <HowItWorks />
       <Services />
-      <Signup />
+      <SignupBusiness/>
       <TwoImages />
     </div>
   );

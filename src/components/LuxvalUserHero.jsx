@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import { signUpUser } from "../services/api";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import isEmail from "validator/lib/isEmail";
 
 const LuxvalUserHero = () => {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const doSignUpUser = async () => {
+    if (!isEmail(email)) {
+      setEmailError("Please enter a valid email address.");
+    }
+    try {
+      if (isEmail(email)) {
+        setEmailError("");
+        const response = await signUpUser(email);
+        const data = response.data;
+        console.log(data);
+        toast.success("Presignup done successfully");
+        setEmail("");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="overflow-hidden">
       <div className="relative">
@@ -36,19 +60,30 @@ const LuxvalUserHero = () => {
               </p>
               {/* button */}
               <div className="bg-black sm:mb-[40px] relative mt-[30px] md:mt-[70px]  rounded-[178px] flex items-center py-[20px] h-[60px] max-w-[490px] m-auto ">
-                <button className="text-white rounded-full gradient-btn ">
+                <button
+                  onClick={doSignUpUser}
+                  className="text-white rounded-full gradient-btn "
+                >
                   <p className="bg-black py-[17px] px-[10px] sm:px-[30px] rounded-full">
                     Pre Sign Up
                   </p>
                 </button>
+                <ToastContainer />
                 <div className="field bg-black ml-3 sm:ml-[15px] md:ml-[25px] max-w-[220px] md:max-w-[286px] w-[100%] ">
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     className=" text-white bg-black outline-none max-w-[212px] w-[100%] "
                     placeholder="Enter your email address"
-                    type="text"
+                    type="email"
+                    value={email}
                   />
                 </div>
               </div>
+              {emailError && (
+                <p className="text-red-500  relative  ml-[130px]">
+                  {emailError}
+                </p>
+              )}
 
               {/* car img */}
               <div className="relative">
