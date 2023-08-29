@@ -10,7 +10,7 @@ const Cookies2 = () => {
   return (
     <div className={`${active === false ? "hidden" : "block"}`}>
       <div className="cookies">
-        {/* fixed bos */}
+        {/* fixed boss */}
         <div className="bg-[#B6ADA6] z-50 rounded-xl max-w-[350px] fixed bottom-[10px] right-[10px] p-5">
           <div>
             <img
